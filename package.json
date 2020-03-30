@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "lerna run start --stream --parallel",
+    "lint": "eslint .",
+    "release": "cross-env HUSKY_BYPASS=true lerna publish from-git"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "[[ -n $HUSKY_BYPASS ]] || commitlint -e $HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier-eslint --write",
+      "eslint",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-conventional": "8.2.0",
+    "babel-eslint": "10.0.3",
+    "babel-loader": "8.1.0",
+    "babel-preset-gatsby": "0.3.1",
+    "cross-env": "7.0.0",
+    "eslint": "6.5.1",
+    "eslint-config-problems": "4.0.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-react": "7.19.0",
+    "husky": "3.0.9",
+    "lerna": "3.18.1",
+    "lerna-changelog": "0.8.2",
+    "lint-staged": "9.4.2",
+    "prettier": "1.18.2",
+    "prettier-eslint-cli": "5.0.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "lerna": "2.7.1",
+  "version": "independent",
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "packages": [
+    "packages/*"
+  ],
+  "command": {
+    "publish": {
+      "allowBranch": "master",
+      "yes": true
+    },
+    "version": {
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "yes": false,
+      "message": "chore(release): publish"
+    }
+  },
+  "changelog": {
+    "labels": {
+      "enhancement": ":rocket: Enhancement",
+      "bug": ":bug: Bug Fix"
+    },
+    "cacheDir": ".changelog"
+  }
+}
