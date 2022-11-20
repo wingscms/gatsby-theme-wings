@@ -42,6 +42,6 @@
     "eslint-plugin-jsx-a11y": "6.2.3"
   },
   "peerDependencies": {
-    "styled-components": "^4"
+    "styled-components": "^4 || ^5.0.0"
   }
 }
