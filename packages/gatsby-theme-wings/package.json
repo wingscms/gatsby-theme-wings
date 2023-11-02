@@ -39,7 +39,7 @@
   "devDependencies": {
     "babel-eslint": "10.0.3",
     "babel-preset-gatsby": "0.1.11",
-    "eslint-plugin-jsx-a11y": "6.2.3"
+    "eslint-plugin-jsx-a11y": "6.8.0"
   },
   "peerDependencies": {
     "styled-components": "^4"
